@@ -1,0 +1,216 @@
+/* body  {
+    background: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}  */
+
+.head {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-sec {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+  
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 3px solid #fff;
+}
+
+.menu-btn-burger {
+    width: 50px;
+    height: 6px;
+    background: rgb(7, 7, 7);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: rgb(7, 7, 7);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn-burger::after {
+    transform: translateY(16px);
+}
+
+/* animation */
+.menu-btn.open .menu-btn-burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn-burger::before {
+    transform: rotate(45deg) translate(35px, -35px)
+}
+
+.menu-btn.open .menu-btn-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px)
+}
+
+    .mainMenu {
+        display: none;
+    }
+
+    .mainMenu.toggleCls {
+        display: block;
+    }
+
+    .container {
+        display: grid;
+        grid-gap: 0px;
+        height: 800px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "img",
+        "bio";
+    }
+
+    .imgDiv {
+        grid-area: "img";
+    }
+
+    .bio {
+        grid-area: "bio";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    .title-1 {
+        grid-area: "title";
+        display: flex;
+        justify-content: center;
+    }
+
+    .projects {
+        display: grid;
+        height: 500px;
+        width: 100%;
+        grid-gap: 5px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "title"
+        "prog1"
+        "prog2"
+        "prog3";
+
+    }
+
+    .prog1 {
+        grid-area: "prog1";
+    }
+
+    .prog2 {
+        grid-area: "prog2";
+    }
+
+    .prog3 {
+        grid-area: "prog3";
+    }
+
+    .contact {
+        display: grid;
+        grid-gap: 0px;
+        height: 500px;
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "addy",
+        "info";
+    }
+
+    .infoSec {
+        grid-area: "info";
+    }
+
+    .addy {
+        grid-area: "addy";
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer {
+        grid-area: "footer";
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+@media(min-width: 769px) {
+    .nav-sec {
+        flex-direction: row;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .mainMenu {
+        display: initial;
+    }
+
+    .container {
+        grid-template-areas:
+        "img bio";
+    }
+
+    .imgDiv {
+        grid-area: "img";
+    }
+    
+    .title-1 {
+        grid-area: "title";
+    }
+
+    .bio {
+        grid-area: "bio";
+    }
+
+    .projects {
+        grid-gap: 8px;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: auto;
+        grid-area: 
+        "... title ...",
+        "prog1 prog2 prog3";
+
+    }
+ 
+    .contact {
+        grid-template-areas:
+        "addy info";
+    }
+    
+
+}
