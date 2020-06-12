@@ -91,6 +91,7 @@
         "photo"
         "project"
         "contact"
+        "mappy"
         "footer";
     }
 
@@ -157,6 +158,9 @@
         padding: 10px;
       }
 
+    .prog-top {
+        padding-top: auto;
+    }
 
       
       .image {
@@ -220,6 +224,16 @@
         justify-content: center;
     }
 
+    .myMap {
+        grid-area: mappy;
+    }
+
+    #map {
+        height: 500px;
+        width: 100%;
+
+    }
+
     .footer {
         grid-area: footer;
         height: 150px;
@@ -259,6 +273,10 @@
 
     .progs {
         flex: 0 0 25.3%;
+    }
+
+    .prog-top {
+        padding-top: 100px;
     }
  
     .contact {
