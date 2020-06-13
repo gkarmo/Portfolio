@@ -15,7 +15,7 @@
 .nav-sec {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    /* flex-direction: row; */
 }
   
 .menu-btn {
@@ -76,10 +76,25 @@
 
     .mainMenu {
         display: none;
+        list-style-type: none;
     }
 
+    .head-link {
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        color: black;
+        text-decoration: none;
+        padding: auto;
+    }
+
+    .head-link:hover {
+        background-color: black;
+        color: white;
+    }
+    
     .mainMenu.toggleCls {
         display: block;
+        text-align: center;
     }
 
     .main-container {
@@ -222,10 +237,10 @@
         display: flex;
         justify-content: center;
         /* align-items: center; */
-    }
-
-    .inputSec {
-        padding-top: 40px;
+        flex-direction: column;
+        width: 75%;
+        height: 50px;
+        padding-top: 50px;
     }
 
     .addy {
@@ -281,7 +296,10 @@
     }
 
     .mainMenu {
-        display: initial;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
     }
 
     .container {
@@ -311,6 +329,10 @@
     .contact {
         grid-template-areas:
         "addy info";
+    }
+
+    .head-link {
+        padding: 8px;
     }
     
 
